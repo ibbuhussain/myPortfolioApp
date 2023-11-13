@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>MyDashboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--SideBar code-->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="./images/logo2.jpg">
+                    <!-- <h2> <span class="danger">  </span></h2> -->
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">
+                        dashboard
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="/todo">
+                    <span class="material-symbols-outlined">
+                        receipt_long
+                    </span>
+                    <h3>Task List</h3>
+                </a>                
+                <a href="#facebook">
+                    <span> <i class='bx bxl-facebook-circle'></i> </span>
+                    <h3>Facebook</h3>
+                </a>
+
+                <a href="#instagram">
+                    <span> <i class='bx bxl-instagram-alt'></i> </span>
+                    <h3>Instagram</h3>
+                </a>                       
+                <a href="https://github.com/ibbuhussain" target="_blank">
+                    <span>
+                        <i class='bx bxl-github'></i>
+                    </span>
+                    <h3>Github</h3>
+                </a>                
+                <a href="#crypto">
+                    <span>
+                        <i class='bx bxl-bitcoin'></i>
+                    </span>
+                    <h3>Cypto</h3>
+                    <span class="message-count">27</span>
+                </a>
+                <a href="/bookmarks" target="_blank">
+                    <span class="material-symbols-outlined">
+                        bookmarks
+                        </span>
+                    <h3>My Bookmarks</h3>
+                </a>
+                <a href="/">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!--End of Sidebar section-->
+
+        <!--Main Content Section-->
+        <main>
+
+<!--Start of New Users -->
+
+<div class="new-users">
+    <h1>Welcome to your Dashboard</h1>
+    <div class="user-list">
+
+        <div class="user">
+            <img src="./images/profile-2.jpg">
+            <h2>Instagram</h2>
+            <p>@ibbuhussain_</p>
+        </div>
+
+        <div class="user">
+            <img src="./images/profile-3.jpg">
+            <h2>Facebook</h2>
+            <p>@ibbuhussain7</p>
+        </div>
+
+        <div class="user">
+            <img src="./images/profile-4.jpg">
+            <h2>Twitter</h2>
+            <p>@ibbuhussain</p>
+        </div>
+
+        <div class="user">
+            <img src="./images/plus.png">
+            <h2>Github</h2>
+            <p>@ibbuhussain</p>
+        </div>
+    </div>
+
+</div>
+<!--END of New Users -->
+
+
+        <section id="facebook">
+            <h2>Facebook Analytics</h2>
+            <!--Analyses-->
+            <div class="analyse">
+
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Account Name</h3>
+                            <h1 class="analysesCon">6,786</h1>
+                        </div>
+                        <div class="progress">
+                            <span class="material-symbols-outlined">
+                                person_book
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Last Post <br> Date & Time:</h3>
+                            <h1 class="analysesCon" id="latestPostDateTime">Loading...</h1>
+                        </div>
+                        <div class="progress">
+                            <!-- <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>-28%</p>
+                            </div> -->
+                            <span class="material-symbols-outlined ">
+                                calendar_month
+                                </span>                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>No. of Friends</h3>
+                            
+                            <h1 class="analysesCon" id="friendsCount">Loading....</h1>
+                            
+                        </div>
+                        <div class="progress">
+                            <!-- <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+31%</p>
+                            </div> -->
+
+                            <span class="material-symbols-outlined">
+                                diversity_3
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!--ENd of Analyses-->
+
+            <!--Recent order Tables-->
+            <!-- REMOVED it -->
+            <!--End of Recent order Tables-->
+        </section> <!--END of FAcebook Section-->
+
+
+        <section id="instagram">
+            <h2>Instagram Analytics</h2>
+            <!--Analyses-->
+            <div class="analyse">
+
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Account Name</h3>
+                            <h1 class="analysesCon">6,786</h1>
+                        </div>
+                        <div class="progress">
+                            <span class="material-symbols-outlined">
+                                person_book
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Last Post <br> Date & Time:</h3>
+                            <h1 class="analysesCon" id="latestPostDateTime">Loading...</h1>
+                        </div>
+                        <div class="progress">
+                            <span class="material-symbols-outlined ">
+                                calendar_month
+                                </span>                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>No. of Followers</h3>
+                            
+                            <h1 class="analysesCon" id="friendsCount">Loading....</h1>
+                            
+                        </div>
+                        <div class="progress">
+                            <span class="material-symbols-outlined">
+                                diversity_3
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!--ENd of Analyses-->
+
+            <!--Recent order Tables-->
+              <!-- REMOVED it -->
+            <!--End of Recent order Tables-->
+        </section>
+
+
+
+
+
+
+<!--Start of Crypto -->
+<section id="crypto">
+<div class="new-users">
+    <h2>Crypto Currencies</h2>
+
+    
+    <div class="analyse">
+
+        <div class="sales">
+            <div class="status">
+                <div class="info">
+                    <h3>Bitcoin</h3>
+                    <h5>Click below</h5>
+                    <a href="https://www.blockchain.com/explorer/addresses/btc/1BZVWFFwHayE5uky7ESDXNPFh3FH6i1W74" target="_blank">Wallet 1</a>
+                    <br>
+                    <a href="https://blockstream.info/address/1HdarU4Zb4MrvT5T7YpCPCtQF4T3Ld2P4C" target="_blank">Wallet 2</a>
+                </div>
+                <div class="progress">
+                    <span class="material-symbols-outlined">
+                        currency_bitcoin
+                        </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="visits">
+            <div class="status">
+                <div class="info">
+                    <h3>Litecoin</h3>
+                    <h5>Click below</h5>
+                    <a href="https://live.blockcypher.com/ltc/address/LQ4Ga7CVv4KAeeswvUqW7VY9QRG1WcEPcL/" target="_blank">Wallet 1</a>
+                </div>
+                <div class="progress">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="searches">
+            <div class="status">
+                <div class="info">
+                    <h3>XLM</h3>
+                    
+                    <h5>Click below</h5>
+                    <a href="https://stellar.expert/explorer/public/account/GA4LU3T3WNVW4Z5YO6ONCR5A7BSDTYYD7A3SZJUTB3ENSCV5KDBRU3TP?account[]=GA4LU3T3WNVW4Z5YO6ONCR5A7BSDTYYD7A3SZJUTB3ENSCV5KDBRU3TP" target="_blank">Wallet 1</a>
+   
+                </div>
+                <div class="progress">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+</section>
+<!--END of crypto -->
+
+
+
+
+
+        </main>
+        <!--END of Main Section-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--Right Section Begins from here-->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    
+                    <span class="material-symbols-outlined 
+                    ">
+                        dark_mode
+                    </span>
+                    <span class="material-symbols-outlined
+                    active">
+                        light_mode
+                    </span> 
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <!-- <p>Aasalamualikum <b>,</b></p> -->
+                        <!-- <small class="text-muted">Ibraheem</small> -->
+                    </div>
+                    <div class="profile-photo">
+                        <!-- <img src="./images/logo2.jpg"> -->
+                        <a href="/">
+                            <span class="material-symbols-outlined">
+                            logout
+                            </span>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--END of NAVV-->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="./images/logo2.jpg">
+                    <h2>ibbuhussain</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-symbols-outlined">
+                        circle_notifications
+                    </span>
+                </div>
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop for Still Media</h3>
+                            <small class="text_muted">
+                                8:00 - 23:00
+                            </small>
+                        </div>
+                        <span class="material-symbols-outlined">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Content Making</h3>
+                            <small class="text_muted">
+                                10:00 - 16:00
+                            </small>
+                        </div>
+                        <span class="material-symbols-outlined">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                        <a href="/todo"> <h3>Add Reminder</h3> </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <script src="./jsLogic/dashbrd.js"></script>
+   
+</body>
+
+</html>
+
+
+
+<!-- <div class="recent-orders"> -->
+    <!-- <h2>Recent Posts</h2> -->
+    <!-- <table> -->
+        <!-- <thead> -->
+            <!-- <tr> -->
+ <!--               <th></th>            serialNumber -->
+                <!-- <th>Title</th> -->
+                <!-- <th>Date</th> -->
+                <!-- <th>Status</th> -->
+                <!-- <th></th> -->
+            <!-- </tr> -->
+        <!-- </thead> -->
+        <!-- <tbody></tbody> -->
+    <!-- </table> -->
+    <!-- <a href="#">Show All</a> -->
+    <!-- <button id="togglePosts">Show All</button> -->
+<!-- </div> -->

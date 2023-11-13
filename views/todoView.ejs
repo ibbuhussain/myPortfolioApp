@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myTask</title>
+
+    <link rel="stylesheet" href="./styles/todoStyle.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+  </head>
+  <body>
+
+  <!-- Modal -->
+  <div id="pinModal" class="modal">
+    <div class="modal-content">
+
+      <!-- <span class="close" id="closeModal">&times;</span> -->
+
+      <h1>Authorize to access the Protected Page</h1>
+      <a id="closeModal" href="/dashbrd"><span class="close" >&times;</span></a> 
+      <form action="/authenticate-pin" method="post"> 
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin" name="pin" required>
+        <button type="submit">OK</button> <!--onclick="authenticatePin()"-->
+       </form> 
+    </div>
+  </div> <!--END of Modal div-->
+
+
+
+
+
+    <div class="wrapper">
+      <div class="task-input">
+        <img src="./images/todo-bars-icon.svg" />
+        <input type="text" name="" id="" placeholder="Add a New Task" />
+      </div>
+      <div class="control">
+        <div class="filters">
+          <span id="all" class="active"> All </span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
+        </div>
+        <a href="/dashbrd">
+         <button class="clear-btn">Go Back</button></a> <!-- Clear All Button is hidden in CSS -->
+      </div>
+      <ul class="task-box"></ul>
+    </div>
+
+    <script src="./jsLogic/todoPage.js"></script>
+  </body>
+</html>

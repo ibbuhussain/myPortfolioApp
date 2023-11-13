@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #27278a;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 0 0 0 rgba(255,255,255,0.1);
+  }
+
+  .dark-mode-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+  }
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway',sans-serif;
+}
+
+body{
+    font-size: 14px;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background) ;
+    color: var(--color-white);
+}
+
+header #particles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+}
+header .info-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    height: 100vh;
+}
+
+header .info-text h1{
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+}
+
+header .info-text h3{
+    font-size: 1.5rem;
+}
+
+header .info-text .scroll{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    color: var(--color-white);
+    transform: translate(0,-50%) ;
+    transition: all 0.5s;
+}
+
+header .info-text .scroll:hover{
+    opacity: 0.5;
+}
+
+header .info-text .scroll::before{
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow:  var(--box-shadow);
+    border-radius: 100%;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse{
+    0% ,100%{
+        opacity: 0;
+    }
+    15% ,45%{
+        opacity: 1;
+    }
+    60%{
+         box-shadow: 0 0 0 30px rgba(255,255,255,0.1);
+        opacity:0 ;
+    }
+}
+
+#about, #academics{
+    background-color: var(--color-background);
+    padding: 40px;
+}
+/* --------------------------------------- */
+
+
+#academics .header,  #about .header {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+#about .header h1, #academics .header h1{
+    text-transform: uppercase;
+
+}
+#about .header h1, #academics h1{
+    text-align: center;
+    color: var(--color-white);
+    /*text-transform: uppercase;*/
+}
+/* --------------------------------------- */
+
+#about .header a, #academics .header a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: var(--color-white);
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: #0b1367;
+
+}
+
+#about .header a:hover , #academics .header a:hover {
+    border-color: var(--color-white);
+    box-shadow: none;
+
+}
+
+#about .card, #academics .card{
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#about .card:hover, #academics .card:hover{
+    border-color: var(--color-white);
+    box-shadow: none;
+}
+
+
+#about .card img{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 35%;
+}
+
+#about .card .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#about .card .info h1, #academics .card .info h1{
+    margin-bottom: 20px;
+    color: var(--color-white);
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+
+}
+
+#about .card .info p, #academics .card .info p{
+    color: var(--color-info-dark);
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#academics .academic-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#academics .academic-cards .card{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
+}
+#academics .academic-cards .card .info i{
+    color: var(--color-white);
+    font-size: 8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+#academics .academic-cards .card .info h1{
+    text-align: center;
+}
+
+#academics .academic-cards .card .info p{
+    font-size: 1.1rem;
+}
+
+.scroll-top{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-background);
+    color: var(--color-white);
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    padding: 16px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+.scroll-top:hover{
+    border-color: var(--color-white);
+    box-shadow: none;
+}
+
+.scroll-down{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--color-background);
+    color: var(--color-white);
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    padding: 16px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+.scroll-down:hover{
+    border-color: var(--color-white);
+    box-shadow: none;
+}
+
+
+/*______________________ MEDIA SCREEN QUERIES_______________________ */
+
+@media screen and (max-width: 720px) {
+
+    header .info-text h1{
+        font-size: 4rem;
+    }
+    header .info-text h3{
+        font-size: 1.1rem;
+    }
+
+    #about .card{
+        flex-direction: column;
+        align-items: center;
+    }
+    #about .card img{
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+
+/*______________________ MEDIA SCREEN QUERIES ENDS_______________________ */
+
+
+/* --------------------------------------------------------------------------------- */
+/* -------------------------BELOW IS MY EDITS--------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+
+
+#skills, #private{
+    background-color: var(--color-background);
+    padding: 40px;
+}
+/* --------------------------------------- */
+
+
+#skills .header {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+#skills .header h1{
+    text-transform: uppercase;
+
+}
+#skills h1 , #private h1{
+    text-align: center;
+    color: var(--color-white);
+}
+
+#skills .card{
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    border: 1px solid transparent;
+    border-color: #317fcc;
+    transition: all 0.3s ease;
+}
+
+#skills #lang{
+    background-color: #0b1367;
+    border-color: rgb(0, 0, 248);
+}
+
+#skills .card:hover ,  #private .card:hover{
+    border-color: var(--color-white);
+    box-shadow: none;
+}
+
+
+#skills .card .info h1{
+    margin-bottom: 8px;
+    color: var(--color-white);
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+    
+}
+
+#skills .card .info p{
+    color: var(--color-info-dark);
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+#skills .skill-cards , #private .private-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+#skills .skill-cards .card{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    flex: 1;
+    min-width: 210px;
+}
+
+#skills .skill-cards .card .info h1{
+    text-align: center;
+}
+
+#skills .skill-cards .card .info p{
+    font-size: 1.1rem;
+    text-align: center;
+
+}
+
+#academics li{
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: #11186c;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 5%;
+}
+
+/* ------LOGIN form-------------------------------------------------------- */
+#private .card{
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    border: 1px solid transparent;
+    border-color: #317fcc;
+    transition: all 0.3s ease;
+}
+#private .private-cards .card{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+#private .card .info h1{
+    margin-bottom: 28px;
+    color: var(--color-white);
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+    margin-top: 28px;
+}
+
+#private .card .info h2{
+    margin-bottom: 20px;
+    color: var(--color-danger);
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-top: 20px; 
+    text-align: center;
+}
+
+
+#login-form {
+    margin-top: 1px;
+    background-color: #11186c;
+    width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(195, 205, 255);
+    border: solid;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 35px;
+    cursor: pointer;
+    display: inline-block; 
+    margin: 0 auto; 
+    box-shadow: #181a1e;
+}
+
+#signUp-button{
+    background-color: #d62c1a;
+    display: none;
+}
+#signUp-button:hover{
+    background-color: #932013;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#user-info {
+    text-align: center;
+}
