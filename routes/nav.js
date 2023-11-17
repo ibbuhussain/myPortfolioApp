@@ -6,6 +6,8 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
+
+
 router.get("/", (req, res) => {
     // Use res.sendFile to send an HTML file
     // res.sendFile(path.join(__dirname, 'views', 'PP.html'));
@@ -22,12 +24,10 @@ router.get("/bookmarks", (req, res) => {
 //     res.sendFile(path.join(__dirname, 'views', 'signUp.html'));
 // }); 
 
-router.get("/dashbrd", (req, res) => {
+/*router.get("/dashbrd", (req, res) => {  //MOVED TO SECURE PAGES ROUTE
     // Use res.sendFile to send an HTML file
     //res.sendFile(path.join(__dirname, 'views', 'dashbrd.html'));
     res.render('dashbrd.ejs');
-
-});
-
+});//*/
 
 export default router;

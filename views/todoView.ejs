@@ -7,9 +7,16 @@
 
     <link rel="stylesheet" href="./styles/todoStyle.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+    <style>
+      #pUser{
+        display: none;
+      }
+    </style>
   </head>
   <body>
-
+<!-- ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ -->
+ 
+ <% if (locals.config !== "rights") { %>
   <!-- Modal -->
   <div id="pinModal" class="modal">
     <div class="modal-content">
@@ -18,16 +25,20 @@
 
       <h1>Authorize to access the Protected Page</h1>
       <a id="closeModal" href="/dashbrd"><span class="close" >&times;</span></a> 
-      <form action="/authenticate-pin" method="post"> 
-        <label for="pin">PIN:</label>
+      <form action="/authenticate-pin" method="POST"> 
+         <!--As required for passport value set 'abc' and display hidden--->
+        <input type="text" id="pUser" name="PinUser" value="abc" >
+        <label for="pin">PIN:</label>       
         <input type="password" id="pin" name="pin" required>
+        
         <button type="submit">OK</button> <!--onclick="authenticatePin()"-->
        </form> 
     </div>
   </div> <!--END of Modal div-->
 
+   <% } %> <!--Give an logiv to detect that secirePages tag that prevetns modal views. -->
 
-
+<!-- ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ -->
 
 
     <div class="wrapper">
@@ -46,6 +57,8 @@
       </div>
       <ul class="task-box"></ul>
     </div>
+    
+<!-- ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ -->
 
     <script src="./jsLogic/todoPage.js"></script>
   </body>

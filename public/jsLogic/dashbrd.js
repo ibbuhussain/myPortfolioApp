@@ -1,6 +1,6 @@
 // Making an API request
-var pageIdGlobal = '861654945513225';
-var accessTokenGlobal = 'EAAytwBp639oBO2MMDWuND4sH2R7zC0e0DapMETZBx93U0xEKu98JjrHBvffDWOOZCCLlfZAKNwOs1igHdojBgZAYEVLMN7xZBGxgI3uZBvO3YvldNkPkIZBbp3FK8cf3aKzxUPTNxzo3gDWwhIxDJ2cIY9xZCU15ok3mhXdZB7RETfyiSuYfaeCrrr1uPxjQKlaFTxlDYrcouZBcU3ZB2BRrgvDlggluHYZD';
+var pageIdGlobal = process.env.PAGEID;
+var accessTokenGlobal = process.env.ACCESSTOKEN;
 
 
 //#####################################################################################################

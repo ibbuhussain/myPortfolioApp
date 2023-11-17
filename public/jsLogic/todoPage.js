@@ -357,11 +357,11 @@ function formatTime(timeString) {
   // modalLogic.js
 
 // Function to check if the modal should be displayed from Middleware
-const shouldDisplayModal = () => {
+/*const shouldDisplayModal = () => {
     // Use the query parameter from the URL to determine if the modal should be displayed
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('modalNotDisplayed') !== 'true';
-  };
+  };*/ //Commented Because function is removed from this to render pass method
   
   // Function to display or hide the modal based on the logic
   const updateModalVisibility = () => {
