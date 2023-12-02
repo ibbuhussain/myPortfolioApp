@@ -1,6 +1,8 @@
 // Making an API request
-var pageIdGlobal = process.env.PAGEID;
-var accessTokenGlobal = process.env.ACCESSTOKEN;
+var pageIdGlobal = '861654945513225';
+//process.env.PAGEID;
+var accessTokenGlobal = 'EAAytwBp639oBOyvvS2E0lmnurBSgZCaXfhjAYxNhVok7mn2dvYQ9YdZAIZBwEwZA8MlJtAj4c2678H5FyZB8Cin68ICYCpBO8gpvbEPuTyCKRWJyiIaZC3YkH7X72i5uAPrOPmsm4YIj9PElSUL3J7PsvD4U6jKnH1lJXanXANLo0WHBklbB55hCktHbgu1R0G9RAHd3Ny';
+//process.env.ACCESSTOKEN;
 
 
 //#####################################################################################################
@@ -77,6 +79,21 @@ fetch(`https://graph.facebook.com/v18.0/${userId1}/posts?fields=created_time&acc
     .catch(error => {
         console.error(error);
         document.getElementById('latestPostDateTime').textContent = ' Error';
+    });
+//---------------------------------------
+//Account Name of  FaceBook
+fetch(`https://graph.facebook.com/v18.0/${userId}?fields=id%2Cname%2Cfriends&access_token=${accessToken}`)
+    .then(response => response.json())
+    .then(data => {
+        // Display account name on page
+        const accountName = data.name;
+
+        document.getElementById('accountName').textContent = `${accountName}`;
+    })
+    .catch(error => {
+        console.error(error);
+
+        document.getElementById('accountName').textContent = 'Error: Token Expired';
     });
 //---------------------------------------
 
